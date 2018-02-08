@@ -61,7 +61,6 @@ public class TimeUtils {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-//		java.sql.Timestamp t = new java.sql.Timestamp(d.getTime());
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String date = simpleDateFormat.format(d);
 
@@ -89,26 +88,7 @@ public class TimeUtils {
 
         return date;
     }
-    /**
-     * 获取当前时间的TimeStamp类型
-     *
-     * @return Timestamp 当前时间的TimeStamp类型
-     */
-    public static Timestamp getCurrentTime_f() {
-        Timestamp t = null;
-        try {
-            Date date = new Date();
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-            String applyForTime = sdf.format(date);
-            Date d = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(applyForTime);
-            t = new Timestamp(d.getTime());
-            return t;
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
 
-        return null;
-    }
 
     /**
      * 获取指定格式时间的TimeStamp类型。

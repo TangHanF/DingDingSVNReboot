@@ -41,7 +41,6 @@ public class SendMsgToReboot {
 
         initParam(args[0]);
 
-        //准备组织消息
         switch (msgType) {
             case "text":
                 prepareTextMsgAndSend(args);
