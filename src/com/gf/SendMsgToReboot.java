@@ -112,32 +112,32 @@ public class SendMsgToReboot {
         // <editor-fold desc="组织消息">
         switch (argsLen) {
             case 3:
-                msg += "【提 交 者】" + (userMap.get(args[1]) != null ? userMap.get(args[1]) : args[1]) + "\n";
-                msg += "【目    录】" + args[2] + "\n";
+                msg += "【提交人】" + (userMap.get(args[1]) != null ? userMap.get(args[1]) : args[1]) + "\n";
+                msg += "【版本库名】" + CommonUtils.getRepName(args[2]) + "\n";
                 break;
             case 4:
-                msg += "【提 交 者】" + (userMap.get(args[1]) != null ? userMap.get(args[1]) : args[1]) + "\n";
-                msg += "【目    录】" + args[2] + "\n";
-                msg += "【时    间】" + args[3].substring(0, 19).trim() + "\n";
+                msg += "【提交人】" + (userMap.get(args[1]) != null ? userMap.get(args[1]) : args[1]) + "\n";
+                msg += "【版本库名】" + CommonUtils.getRepName(args[2]) + "\n";
+                msg += "【提交时间】" + args[3].substring(0, 19).trim() + "\n";
                 break;
             case 5:
-                msg += "【提 交 者】" + (userMap.get(args[1]) != null ? userMap.get(args[1]) : args[1]) + "\n";
-                msg += "【目    录】" + args[2] + "\n";
-                msg += "【时    间】" + args[3].substring(0, 19).trim() + "\n";
-                msg += "【日    志】\n\t" + args[4] + "\n";
+                msg += "【提交人】" + (userMap.get(args[1]) != null ? userMap.get(args[1]) : args[1]) + "\n";
+                msg += "【版本库名】" + CommonUtils.getRepName(args[2]) + "\n";
+                msg += "【提交时间】" + args[3].substring(0, 19).trim() + "\n";
+                msg += "【提交说明】\n\t" + args[4] + "\n";
                 break;
             case 6:
-                msg += "【提 交 者】" + (userMap.get(args[1]) != null ? userMap.get(args[1]) : args[1]) + "\n";
-                msg += "【目    录】" + args[2] + "\n";
-                msg += "【时    间】" + args[3].substring(0, 19).trim() + "\n";
-                msg += "【日    志】\n\t" + args[4] + "\n";
+                msg += "【提交人】" + (userMap.get(args[1]) != null ? userMap.get(args[1]) : args[1]) + "\n";
+                msg += "【版本库名】" + CommonUtils.getRepName(args[2]) + "\n";
+                msg += "【提交时间】" + args[3].substring(0, 19).trim() + "\n";
+                msg += "【提交说明】\n\t" + args[4] + "\n";
                 msg += "【相关操作】\n%s" + "\n";
                 break;
             case 7:
-                msg += "【提 交 者】" + (userMap.get(args[1]) != null ? userMap.get(args[1]) : args[1]) + "\n";
-                msg += "【目    录】" + args[2] + "\n";
-                msg += "【时    间】" + args[3].substring(0, 19).trim() + "\n";
-                msg += "【日    志】\n\t" + args[4] + "\n";
+                msg += "【提交人】" + (userMap.get(args[1]) != null ? userMap.get(args[1]) : args[1]) + "\n";
+                msg += "【版本库名】" + CommonUtils.getRepName(args[2]) + "\n";
+                msg += "【提交时间】" + args[3].substring(0, 19).trim() + "\n";
+                msg += "【提交说明】\n\t" + args[4] + "\n";
                 msg += "【相关操作】\n%s" + "\n";
                 msg += "【版 本 号】" + args[6] + "\n";
                 break;
