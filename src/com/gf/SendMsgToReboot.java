@@ -23,14 +23,14 @@ import java.util.*;
  */
 public class SendMsgToReboot {
 
-    static String openPush = "false";
-    static String defaultPushToken = "";
-    static String msgType = "text";
-    static String atAll = "false";
+    private static String openPush = "false";
+    private static String defaultPushToken = "";
+    private static String msgType = "text";
+    private static String atAll = "false";
 
-    static String msg_push_people = "";
-    static Map<String, String> userMap = null;
-    static Map<String, List<String>> pushMap = null;
+    private static String msg_push_people = "";
+    private static Map<String, String> userMap = null;
+    private static Map<String, List<String>> pushMap = null;
     /**
      * 钉钉机器人URL模板
      */
