@@ -83,8 +83,9 @@ public class SendMsgToReboot {
             String str = properties.getProperty("users_list");
             String[] userArr = str.split(",");
             userMap = new HashMap<>();
+            String[] tmp = null;
             for (String item : userArr) {
-                String[] tmp = null;
+                tmp = null;
                 if (item.contains("-")) {
                     tmp = item.split("-");
                 } else if (item.contains("=")) {
@@ -152,17 +153,20 @@ public class SendMsgToReboot {
         Map<String, List<String>> map = CommonUtils.dealChangedFileListMap(args[5], pushMap, defaultPushToken);
         Set set = map.entrySet();
         Iterator iterator = set.iterator();
+        Map.Entry entry = null;
+        List<String> fileList = null;
+        String fileName = "";
         while (iterator.hasNext()) {
             String res = "";
             Object tmpMsg;
-            Map.Entry entry = (Map.Entry) iterator.next();
+            entry = (Map.Entry) iterator.next();
             String token = (String) entry.getKey();
-            List<String> fileList = (List<String>) entry.getValue();
+            fileList = (List<String>) entry.getValue();
 
             switch (msgType) {
                 case "text":
                     for (int i = 0; i < fileList.size(); i++) {
-                        String fileName = fileList.get(i);
+                        fileName = fileList.get(i);
                         res += (i + 1) + "、" + fileName + "\n";
                     }
                     tmpMsg = String.format(String.valueOf(msg), res);
@@ -188,18 +192,22 @@ public class SendMsgToReboot {
         Map<String, List<String>> map = pushMap;
         Set set = map.entrySet();
         Iterator iterator = set.iterator();
+        Map.Entry entry = null;
+        String token = "", fileName = "";
+        List<String> fileList = null;
+        MarkdownMessageExtend message = null;
         while (iterator.hasNext()) {
             orderList.clear();
-            Map.Entry entry = (Map.Entry) iterator.next();
-            String token = (String) entry.getKey();
-            List<String> fileList = (List<String>) entry.getValue();
+            entry = (Map.Entry) iterator.next();
+            token = (String) entry.getKey();
+            fileList = (List<String>) entry.getValue();
             for (int i = 0; i < fileList.size(); i++) {
-                String fileName = fileList.get(i);
+                fileName = fileList.get(i);
                 //orderList.add((i + 1) + "、" + fileName);
                 orderList.add(fileName);
             }
             //创建文本消息对象并初始化
-            MarkdownMessageExtend message = new MarkdownMessageExtend();
+            message = new MarkdownMessageExtend();
             message.setIsAtAll("true".equals(atAll) ? true : false);
             message.setTitle("SVN提交动态");
 
