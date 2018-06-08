@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  * 时间工具类
- * Created by 郭富 2015年1月29日21:03:34
+ * Created by GuoF 2015年1月29日21:03:34
  */
 public class TimeUtils {
 
