@@ -8,7 +8,7 @@ import java.io.Serializable;
  * Title:日志工具类
  * Packet:com.gh.com.gh.utils
  * Description:日志已做加密处理
- * Author:郭富
+ * Author:GuoF
  * Create Date: 2015/4/27.
  * Modify User:
  * Modify Date:
