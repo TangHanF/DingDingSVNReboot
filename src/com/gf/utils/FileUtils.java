@@ -10,7 +10,7 @@ import java.security.MessageDigest;
  * Title:文件工具类
  * Packet:com.gh.utils
  * Description:
- * Author:郭富
+ * Author:GuoF
  * Create Date: 2015/4/27.
  * Modify User:
  * Modify Date:
