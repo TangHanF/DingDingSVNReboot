@@ -6,7 +6,7 @@ import java.io.UnsupportedEncodingException;
  * Title:转换工具类
  * Packet:com.gh.util
  * Description:
- * Author:郭富
+ * Author:GuoF
  * Create Date: 2015/1/31.
  * Modify User:
  * Modify Date:
